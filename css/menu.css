@@ -1,0 +1,110 @@
+#trigger-overlay {
+	display: none;
+}
+ @media screen and (max-width:1170px) {
+#trigger-overlay {
+	display: block;
+}
+.navbar {
+	float: none;
+}
+.navbar-nav>li, .navbar-nav, .navbar {
+    float: none !important;
+}
+.navbar .active > a, .navbar li > a:hover {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+button.hamburger:focus{
+    outline: none;
+     }
+.navbar-default .navbar-nav > li > a {
+    border: none !important;
+     }
+/* Overlay style */
+.overlay {
+	background: rgba(255, 146, 43, 0.9) none repeat scroll 0 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+/* Menu style */
+#trigger-overlay {
+	background: transparent none repeat scroll 0 0 !important;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	right: 30px;
+	top: 28px;
+	z-index: 9999;
+}
+#trigger-overlay i {
+	color: #444 !important;
+	font-size: 40px!important;
+}
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.overlay ul li a {
+	font-size: 34px;
+	font-weight: 300;
+	display: block;
+	color:#1c2431 !important;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+	line-height: normal;
+}
+.overlay ul li a:hover, .overlay ul li a:focus {
+	background: transparent none repeat scroll 0 0 !important;
+	color: #fff !important;
+	text-decoration: none;
+}
+/* Effects */
+.overlay-slidedown {
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+	transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+}
+.overlay-slidedown.open {
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out;
+	transition: transform 0.4s ease-in-out;
+}
+}
+ @media screen and (max-height: 30.5em) {
+.overlay nav {
+	font-size: 34px;
+	overflow: scroll;
+}
+.overlay ul li a {
+	font-size: 34px;
+}
+}
